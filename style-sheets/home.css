@@ -356,7 +356,7 @@ body {
   #hero {
     width: 100%;
     height: 60vh;
-    background: url("../img/hero-bg.jpg") center center;
+    background: url("https://hannahstreasures.com/cdn/shop/products/SKU_TH065.2.jpg?v=1537900437") center center;
     background-size: cover;
     position: relative;
     margin-top: 70px;
@@ -404,13 +404,13 @@ body {
     padding: 12px 28px;
     border-radius: 4px;
     transition: ease-in-out 0.3s;
-    color: #fff;
-    background: #3498db;
+    color: black;
+    background: pink;
     text-transform: uppercase;
   }
   
   #hero .btn-get-started:hover {
-    background: #4ea5e0;
+    background: rgb(237, 158, 172);
   }
   
   @media (max-width: 992px) {
