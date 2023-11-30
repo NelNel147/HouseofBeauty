@@ -15,11 +15,27 @@
     <title>Stylists</title>
   </head>
   <body>
+    <!--HamBurger Icon-->
+<div class="bars" id="nav-action">
+    <span class="bar"> </span>
+  </div>
+  
+  <!--Navbar Links-->
+  <nav id="nav">
+    <ul>
+      <li class="shape-circle circle-one"><a href="contact.html">Contact</a></li>
+      <li class="shape-circle circle-two"><a href="services.html">Services</a></li>
+      <li class="shape-circle circle-three"><a href="booking.html">Booking</a></li>
+      <li class="shape-circle circle-five">
+        <a href="home.html">Home</a>
+      </li>
+    </ul>
+  </nav>
     <div class="card">
       <p><strong>Vernee Nycole</strong> | <strong>BEAUTICIAN</strong></p>
       <p class="card-footer">vnhouseofbeauty@gmail.com</p>
     </div>
-    <h1>𝒱𝒩 | 𝐻𝑜𝓊𝓈𝑒 𝑜𝒻 𝐵𝑒𝒶𝓊𝓉𝓎
+    <h1>𝒱|𝒩
     </h1>
     <div class="card">
       <p><strong>Sha Sha Keke</strong> | <strong>BRAIDER</strong></p>
@@ -29,5 +45,21 @@
       defer
       src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
     ></script>
+    <script>
+        // Setting up the Variables
+var bars = document.getElementById("nav-action");
+var nav = document.getElementById("nav");
+
+
+//setting up the listener
+bars.addEventListener("click", barClicked, false);
+
+
+//setting up the clicked Effect
+function barClicked() {
+  bars.classList.toggle('active');
+  nav.classList.toggle('visible');
+}
+    </script>
   </body>
 </html>
