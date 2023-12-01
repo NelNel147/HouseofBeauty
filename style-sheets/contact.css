@@ -3,10 +3,10 @@
   }
   
   body {
-    background-color:write;
+    background-color: white;
     padding: 20px;
     font-family: Arial;
-    background-image: url(/HouseofBeauty/assets/img/color\ backk.jpg);
+    background-image: url("/assets/img/colorbackground.jpg");
   }
   
   /* Center website */
@@ -47,7 +47,7 @@ animation-duration: 4s;
 animation-delay: -2s;
 }
 
-p1{
+p1  {
     float: right;
     font-weight: bold;
     color:black;
@@ -57,7 +57,7 @@ p1{
     font-style: oblique;
     font-weight: bold;
 
-  background-color:orange
+  background-color:orange;
   position: relative;
   animation-name: example;
   animation-duration: 4s;
