@@ -357,7 +357,7 @@ body {
     width: 100%;
     height: 60vh;
     background: url("https://hannahstreasures.com/cdn/shop/products/SKU_TH065.2.jpg?v=1537900437") center center;
-    background-size: cover;
+    background-size: fixed;
     position: relative;
     margin-top: 70px;
     padding: 0;
@@ -1263,14 +1263,13 @@ body {
   # Footer
   --------------------------------------------------------------*/
   #footer {
-    color: #444444;
+    color: gold;
     font-size: 14px;
     background: #f7fbfe;
   }
   
   #footer .footer-top {
     padding: 60px 0 30px 0;
-    background: #fff;
   }
   
   #footer .footer-top .footer-contact {
@@ -1290,13 +1289,13 @@ body {
     line-height: 24px;
     margin-bottom: 0;
     font-family: "Raleway", sans-serif;
-    color: #777777;
+    color: gold;
   }
   
   #footer .footer-top h4 {
     font-size: 16px;
     font-weight: bold;
-    color: #444444;
+    color: gold;
     position: relative;
     padding-bottom: 12px;
   }
@@ -1329,7 +1328,7 @@ body {
   }
   
   #footer .footer-top .footer-links ul a {
-    color: #777777;
+    color: turquoise;
     transition: 0.3s;
     display: inline-block;
     line-height: 1;
@@ -1347,7 +1346,7 @@ body {
   #footer .footer-newsletter h4 {
     font-size: 16px;
     font-weight: bold;
-    color: #444444;
+    color: gold;
     position: relative;
     padding-bottom: 12px;
   }
