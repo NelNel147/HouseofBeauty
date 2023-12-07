@@ -1,0 +1,467 @@
+
+
+body {
+  background-color: whitesmoke;
+}
+
+ /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  #header {
+    height: 70px;
+    transition: all 0.5s;
+    z-index: 997;
+    transition: all 0.5s;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #header .logo h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #384046;
+  }
+  
+  #header .logo h1 a,
+  #header .logo h1 a:hover {
+    color: #384046;
+    text-decoration: none;
+  }
+  
+  #header .logo img {
+    max-height: 40px;
+  }
+  
+  /*--------------------------------------------------------------
+  # Header Social Links
+  --------------------------------------------------------------*/
+  .header-social-links {
+    margin: 0 0 0 30px;
+  }
+  
+  .header-social-links a {
+    color: #9ba6af;
+    padding-left: 8px;
+    display: inline-block;
+    line-height: 0px;
+    transition: 0.3s;
+  }
+  
+  .header-social-links a i {
+    line-height: 0;
+  }
+  
+  .header-social-links a:hover {
+    color: #3498db;
+  }
+  
+  @media (max-width: 768px) {
+    .header-social-links {
+      margin: 0 15px 0 0;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /**
+  * Desktop Navigation 
+  */
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4f5a62;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>a {
+    color: #3498db;
+  }
+  
+  .navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+  }
+  
+  .navbar .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #21262a;
+  }
+  
+  .navbar .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar .dropdown ul a:hover,
+  .navbar .dropdown ul .active:hover,
+  .navbar .dropdown ul li:hover>a {
+    color: #3498db;
+  }
+  
+  .navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+  
+  .navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+  
+  @media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+      left: -90%;
+    }
+  
+    .navbar .dropdown .dropdown:hover>ul {
+      left: -100%;
+    }
+  }
+  
+  /**
+  * Mobile Navigation 
+  */
+  .mobile-nav-toggle {
+    color: #384046;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+  }
+  
+  .mobile-nav-toggle.bi-x {
+    color: #fff;
+  }
+  
+  @media (max-width: 991px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+  
+    .navbar ul {
+      display: none;
+    }
+  }
+  
+  .navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(33, 38, 42, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+  }
+  
+  .navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+  
+  .navbar-mobile a,
+  .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #384046;
+  }
+  
+  .navbar-mobile a:hover,
+  .navbar-mobile .active,
+  .navbar-mobile li:hover>a {
+    color: #3498db;
+  }
+  
+  .navbar-mobile .getstarted,
+  .navbar-mobile .getstarted:focus {
+    margin: 15px;
+  }
+  
+  .navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  }
+  
+  .navbar-mobile .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar-mobile .dropdown ul a {
+    padding: 10px 20px;
+  }
+  
+  .navbar-mobile .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar-mobile .dropdown ul a:hover,
+  .navbar-mobile .dropdown ul .active:hover,
+  .navbar-mobile .dropdown ul li:hover>a {
+    color: #3498db;
+  }
+  
+  .navbar-mobile .dropdown>.dropdown-active {
+    display: block;
+  }
+
+li,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sec-title {
+  position: relative;
+  padding-bottom: 40px;
+}
+.sec-title .title {
+  position: relative;
+  color: gold;
+  font-size: 18px;
+  font-weight: 700;
+  padding-right: 50px;
+  margin-bottom: 15px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+.sec-title .title:before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 7px;
+  width: 40px;
+  height: 1px;
+  background-color: #bbb;
+}
+.sec-title h2 {
+  position: relative;
+  color: #252525;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5em;
+  display: block;
+}
+.sec-title.light h2 {
+  color: #fff;
+}
+.appointment-section {
+  position: relative;
+  padding: 110px 0 80px;
+}
+.appointment-section .form-column {
+  position: relative;
+  margin-bottom: 40px;
+}
+.default-form {
+  position: relative;
+}
+.default-form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.default-form .form-group i {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #00b8ca;
+  font-size: 18px;
+}
+.default-form .form-group input[type="text"],
+.default-form .form-group input[type="tel"],
+.default-form .form-group input[type="email"],
+.default-form .form-group select {
+  position: relative;
+  display: block;
+  width: 100%;
+  line-height: 28px;
+  padding: 10px 20px;
+  color: #000;
+  height: 50px;
+  font-size: 13px;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.default-form .form-group input[type="text"]:focus,
+.default-form .form-group input[type="tel"]:focus,
+.default-form .form-group input[type="email"]:focus,
+.default-form .form-group textarea:focus {
+  border-color: #00b8ca;
+}
+.default-form .form-group textarea {
+  position: relative;
+  display: block;
+  width: 100%;
+  line-height: 22px;
+  padding: 15px 20px;
+  color: #797979;
+  height: 120px;
+  background: #fff;
+  resize: none;
+  font-size: 14px;
+  border: 1px solid #d7d7d7;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.default-form .form-group .appointment-btn {
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 11px 30px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #00b8ca;
+  border: 1px solid #00b8ca;
+  text-transform: uppercase;
+  color: #fff;
+}
+.default-form .form-group .btn-detail {
+  position: relative;
+  color: #777;
+  font-size: 15px;
+  margin-left: 35px;
+  display: inline-block;
+}
+.appointment-section .schedule-column {
+  position: relative;
+}
+.appointment-section .schedule-column .inner-outer {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+.appointment-section .schedule-column .inner-outer:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 347px;
+  height: 268px;
+  background: url(https://i.ibb.co/gjZ1NFM/pattern-Appoinment.png) no-repeat;
+}
+.appointment-section .schedule-column .inner-column {
+  position: relative;
+  padding: 25px 30px;
+  border: 2px solid #00b8ca;
+  background-color: #fff;
+}
+.appointment-section .schedule-column h2 {
+  position: relative;
+  color: #252525;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4em;
+  margin-bottom: 15px;
+}
+.appointment-section .schedule-column .time-list {
+  position: relative;
+}
+.appointment-section .schedule-column .time-list li {
+  position: relative;
+  color: #777;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.appointment-section .schedule-column .time-list li:last-child {
+  margin-bottom: 0;
+}
+.appointment-section .schedule-column .time-list li strong {
+  color: #222;
+  font-weight: 700;
+}
+.appointment-section .schedule-column .time-list .closed {
+  position: relative;
+  color: #00b8ca;
+}
