@@ -8,6 +8,22 @@
     <title>Log In</title>
 </head>
 <body>
+  <!--HamBurger Icon-->
+<div class="bars" id="nav-action">
+  <span class="bar"> </span>
+</div>
+
+<!--Navbar Links-->
+<nav id="nav">
+  <ul>
+    <li class="shape-circle circle-one"><a href="contact.html">Contact</a></li>
+    <li class="shape-circle circle-two"><a href="services.html">Services</a></li>
+    <li class="shape-circle circle-three"><a href="booking.html">Booking</a></li>
+    <li class="shape-circle circle-five">
+      <a href="index.html">Home</a>
+    </li>
+  </ul>
+</nav>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
 
@@ -28,5 +44,42 @@
     <div class="drop drop-5"></div>
   </div>
 </div>
+<script>
+  const buttons = document.querySelectorAll(".card-buttons button");
+const sections = document.querySelectorAll(".card-section");
+const card = document.querySelector(".card");
+
+const handleButtonClick = e => {
+  const targetSection = e.target.getAttribute("data-section");
+  const section = document.querySelector(targetSection);
+  targetSection !== "#about" ?
+  card.classList.add("is-active") :
+  card.classList.remove("is-active");
+  card.setAttribute("data-state", targetSection);
+  sections.forEach(s => s.classList.remove("is-active"));
+  buttons.forEach(b => b.classList.remove("is-active"));
+  e.target.classList.add("is-active");
+  section.classList.add("is-active");
+};
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", handleButtonClick);
+});
+
+// Setting up the Variables
+var bars = document.getElementById("nav-action");
+var nav = document.getElementById("nav");
+
+
+//setting up the listener
+bars.addEventListener("click", barClicked, false);
+
+
+//setting up the clicked Effect
+function barClicked() {
+  bars.classList.toggle('active');
+  nav.classList.toggle('visible');
+}
+</script>
 </body>
 </html>
